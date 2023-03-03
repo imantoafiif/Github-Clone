@@ -1,4 +1,5 @@
 import Navbar from '@/components/Navbar';
+import Splash from '@/components/Splash';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
@@ -32,12 +33,7 @@ const index = () => {
 
   }, [route])
 
-  return (
-    auth_token ? (
-      <Navbar></Navbar>
-    ) 
-    : <p>no auth</p>
-  )
+  return auth_token ? <Navbar/> : <Splash/>
 
 }
 
