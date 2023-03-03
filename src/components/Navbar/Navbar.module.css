@@ -136,10 +136,7 @@
 
 .dropdown_menu {
     width: 160px;
-    top: 45px;
-    right: 80px;
     background: white;
-    position: absolute;
     display: flex;
     flex-direction: column;
     color: black;
@@ -149,6 +146,18 @@
     padding: 4px 0px;
     margin-top: 2px;
     box-shadow: 0px 0px 25px 10px #d3d3d335;
+}
+
+.dropdown_menu_actions {
+    position: absolute;
+    top: 45px;
+    right: 80px;
+}
+
+.dropdown_profile_actions {
+    position: absolute;
+    top: 45px;
+    right: 34px;
 }
 
 .dropdown_menu > a {
@@ -169,11 +178,20 @@
    background-color: rgba(0, 0, 0, 0);
 }
 
-.dropdown_container i {
+.dropdown_menu_actions i {
     position: absolute;
     color: white;
     font-size: 22px;
     z-index: 1;
-    right: 92px;
-    top: 36px;
+    right: 13px;
+    top: -9px;
+}
+
+.dropdown_profile_actions i {
+    position: absolute;
+    color: white;
+    font-size: 22px;
+    z-index: 1;
+    right: 13px;
+    top: -9px;
 }

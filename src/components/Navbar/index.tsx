@@ -74,14 +74,16 @@ const Navbar = () => {
                             </svg>
                             <i className='fa-solid fa-caret-down'></i>
                         </a>  
-                        <div className={style.header_item_end}>
+                        <a 
+                            onClick={() => setDropdown(2)}
+                            className={style.header_item_end}>
                             <img 
                                 className={style.user_avatar}
                                 src="https://avatars.githubusercontent.com/u/35295280?s=40&v=4">
                             </img>
                             <div className={style.unread_indicator}></div>
                             <i className='fa-solid fa-caret-down'></i>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </nav>
@@ -91,8 +93,19 @@ const Navbar = () => {
                         onClick={() => setDropdown(0)} 
                         className={style.dropdown_container}>
                         {
-                            dropdown == 1 && (
-                                <div>
+                            dropdown == 1 ? (
+                                <div className={style.dropdown_menu_actions}>
+                                    <i className='fa-solid fa-caret-up'></i>
+                                    <div className={style.dropdown_menu}>
+                                        <a>New repository</a>
+                                        <a>Import repository</a>
+                                        <a>New codespace</a>
+                                        <a>New gist</a>
+                                        <a>New organization</a>
+                                    </div>  
+                                </div>
+                            ) : (
+                                <div className={style.dropdown_profile_actions}>
                                     <i className='fa-solid fa-caret-up'></i>
                                     <div className={style.dropdown_menu}>
                                         <a>New repository</a>
