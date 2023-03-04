@@ -108,7 +108,7 @@ const Navbar = () => {
                             ) : (
                                 <div className={style.dropdown_profile_actions}>
                                     <i className='fa-solid fa-caret-up'></i>
-                                    <div className={style.dropdown_menu}>
+                                    <div className={`${style.dropdown_menu} ${style.dropdown_menu_profile}`}>
                                         <a className={style.dropdown_menu_item_no_hover}>Signed in as <strong>imantoafiif</strong></a>
                                         <div className={style.divider}></div>
                                         <div className={style.user_status_container}>
@@ -121,9 +121,17 @@ const Navbar = () => {
                                         <a className={style.dropdown_menu_item}>Your profile</a>
                                         <a className={style.dropdown_menu_item}>Your repositories</a>
                                         <a className={style.dropdown_menu_item}>Your projects</a>
-                                        <a className={style.dropdown_menu_item}>Your starts</a>
+                                        <a className={style.dropdown_menu_item}>Your stars</a>
                                         <a className={style.dropdown_menu_item}>Your gists</a>
                                         <a className={style.dropdown_menu_item}>Your sponsors</a>
+                                        <div className={style.divider}></div>
+                                        <a className={style.dropdown_menu_item}>Upgrade</a>
+                                        <a className={style.dropdown_menu_item}>Try Enterprise</a>
+                                        <a className={style.dropdown_menu_item}>Feature preview</a>
+                                        <a className={style.dropdown_menu_item}>Help</a>
+                                        <a className={style.dropdown_menu_item}>Settings</a>
+                                        <div className={style.divider}></div>
+                                        <a className={style.dropdown_menu_item}>Sign out</a>
                                     </div>
                                     
                                      
