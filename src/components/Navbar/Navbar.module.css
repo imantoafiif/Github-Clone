@@ -148,6 +148,10 @@
     box-shadow: 0px 0px 25px 10px #d3d3d335;
 }
 
+.dropdown_menu_profile {
+    width: 180px;
+}
+
 .dropdown_menu_actions {
     position: absolute;
     top: 45px;
@@ -162,7 +166,7 @@
 
 .dropdown_menu_item,
 .dropdown_menu_item_no_hover {
-    padding: 6px 16px;
+    padding: 7px 16px;
     cursor: pointer;
 }
 
