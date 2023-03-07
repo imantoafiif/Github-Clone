@@ -1,9 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { Router, useRouter } from 'next/router'
 import { useState } from 'react'
 import style from './Navbar.module.css'
 
 const Navbar = () => {
+
+    const route = useRouter()
 
     const onSubmit = (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -17,6 +20,11 @@ const Navbar = () => {
         { label: 'Marketplace', url: '/' },
         { label: 'Explore', url: '/' },
     ]
+
+    const signout = () => {
+        localStorage.removeItem('auth.token')
+        route.push('/')
+    }
 
     const [dropdown, setDropdown] = useState<number>(0)
 
@@ -131,7 +139,11 @@ const Navbar = () => {
                                         <a className={style.dropdown_menu_item}>Help</a>
                                         <a className={style.dropdown_menu_item}>Settings</a>
                                         <div className={style.divider}></div>
-                                        <a className={style.dropdown_menu_item}>Sign out</a>
+                                        <a 
+                                            onClick={signout}
+                                            className={style.dropdown_menu_item}>
+                                            Sign out
+                                        </a>
                                     </div>
                                     
                                      
