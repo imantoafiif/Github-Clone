@@ -112,6 +112,11 @@ const index = () => {
             </div>
           </div>
         </aside>
+        <div className={style.main_content_container}>
+          <div className={style.landing}>
+            
+          </div>
+        </div>
       </div>
     </>
   ) : 
