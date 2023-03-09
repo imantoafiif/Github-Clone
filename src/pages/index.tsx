@@ -114,7 +114,28 @@ const index = () => {
         </aside>
         <div className={style.main_content_container}>
           <div className={style.landing}>
-            
+            <div>
+              <ul className={style.dashboard_container}>
+                <li>
+                  <button className={style.feeds_tab_active}>
+                    <span>Following</span>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <span>
+                      For you
+                      {/* <span className={style.beta_tag}>Beta</span> */}
+                    </span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div className={style.box}>
+              <h2>Discover interesting projects and people to populate your personal news feed.</h2>
+              <p>Your news feed helps you keep up with recent activity on repositories you <Link href="/">watch</Link> or <Link href="/">star</Link> and people you <Link href="/">follow</Link>.</p>
+              <button className={style.explore}>Explore GitHub</button>
+            </div>
           </div>
         </div>
       </div>
